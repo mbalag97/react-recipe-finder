@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/react-recipe-finder/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/react-recipe-finder/static/js/main.84ef71ba.chunk.js",
+    "main.js.map": "/react-recipe-finder/static/js/main.84ef71ba.chunk.js.map",
+    "runtime-main.js": "/react-recipe-finder/static/js/runtime-main.28c69df9.js",
+    "runtime-main.js.map": "/react-recipe-finder/static/js/runtime-main.28c69df9.js.map",
+    "static/js/2.97765033.chunk.js": "/react-recipe-finder/static/js/2.97765033.chunk.js",
+    "static/js/2.97765033.chunk.js.map": "/react-recipe-finder/static/js/2.97765033.chunk.js.map",
+    "index.html": "/react-recipe-finder/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/react-recipe-finder/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.97765033.chunk.js.LICENSE.txt": "/react-recipe-finder/static/js/2.97765033.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.28c69df9.js",
+    "static/js/2.97765033.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.84ef71ba.chunk.js"
+  ]
+}
