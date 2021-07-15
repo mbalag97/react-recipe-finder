@@ -17,16 +17,16 @@ const App = () => {
     <BrowserRouter>
     <Navbar />
       <Changer>
-        <Route path="/" exact>
+        <Route path="/react-recipe-finder/recipe" exact>
           <RecipePage />
         </Route>
-        <Route path="/tic-tac" exact>
+        <Route path="/react-recipe-finder/tic-tac" exact>
           <TicTacToe />
         </Route>
-        <Route path="/ccp" exact>
+        <Route path="/react-recipe-finder/ccp" exact>
           <CCP />
         </Route>
-        <Redirect to="/" />
+        <Redirect to="/react-recipe-finder/recipe" />
       </Changer>
     </BrowserRouter>
   );

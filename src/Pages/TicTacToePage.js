@@ -31,9 +31,13 @@ const TicTacToe = () => {
 
   const handleOnSquareClick = (index) => {
     const strings = Array.from(gameState);
-    strings[index] = isXChance ? "X" : "O";
+    if(strings[index] !== '') {
+      alert('The Box is already occupied')
+    } else {
+      strings[index] = isXChance ? "X" : "O";
     setGameState(strings);
     setIsXChance(!isXChance);
+    }
   };
 
   useEffect(() => {
