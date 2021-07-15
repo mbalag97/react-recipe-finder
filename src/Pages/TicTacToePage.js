@@ -6,6 +6,7 @@ import {
   RowComponent,
   SquareSpan,
   ClearButton,
+  TicTacAppSubHeadingText,
 } from "../Components/ticTacComponent";
 
 const SquareComponent = (props) => {
@@ -77,8 +78,7 @@ const TicTacToe = () => {
   return (
     <TicTacAppHeader>
       <TicTacAppHeadingText>Bala's - Tic Tac Toe - v1</TicTacAppHeadingText>
-      <div>Next Player : {isXChance ? "X" : "O"}</div>
-      <div>State : {JSON.stringify(gameState)}</div>
+      <TicTacAppSubHeadingText>Next Player : {isXChance ? "X" : "O"}</TicTacAppSubHeadingText>
       <RowComponent>
         <SquareComponent
           bottom={true}

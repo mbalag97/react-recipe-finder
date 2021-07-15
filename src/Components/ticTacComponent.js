@@ -19,6 +19,14 @@ export const TicTacAppHeadingText = styled.p`
   margin: 20px;
 `;
 
+export const TicTacAppSubHeadingText = styled.p`
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+`;
+
 export const RowComponent = styled.div`
   display: flex;
   flex-direction: row;
