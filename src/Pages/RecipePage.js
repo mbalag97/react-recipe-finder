@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import { ThemeProvider } from "styled-components";
+import styled, { css } from "styled-components";
 
 import SearchIcon from "@material-ui/icons/Search";
 import FastfoodRoundedIcon from "@material-ui/icons/FastfoodRounded";
@@ -30,6 +31,9 @@ import {
   REACT_APP_EDAMAM_APP_KEY,
 } from "../Config/config";
 
+const SwitchComponent = styled(Switch)`
+z-index:0;
+`
 const RecipePage = () => {
   const [timeoutId, setTimeoutId] = useState("");
   const [darkTheme, setDarkTheme] = useState(true);
@@ -65,7 +69,7 @@ const RecipePage = () => {
           </AppNameComponent>
           <ThemeComponent>
             <p>Light</p>
-            <Switch
+            <SwitchComponent
               checked={darkTheme}
               color="secondary"
               onChange={switchOnchange}

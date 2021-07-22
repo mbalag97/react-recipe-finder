@@ -1,71 +1,82 @@
-import { FaBars } from 'react-icons/fa';
-import { NavLink as Link } from 'react-router-dom';
-import styled from 'styled-components';
+import { FaBars } from "react-icons/fa";
+import { TiArrowRightThick } from "react-icons/ti";
+import { NavLink as Link } from "react-router-dom";
+import styled, { css } from "styled-components";
 
 export const Nav = styled.nav`
-  background: #63D471;
-  height: 85px;
+  width: 100%;
+  height: 65px;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
-  padding: 0.2rem calc((100vw - 1000px) / 2);
-  z-index: 12;
-  /* Third Nav */
-  /* justify-content: flex-start; */
-`;
-  
-export const NavLink = styled(Link)`
-  color: #808080;
-  display: flex;
   align-items: center;
-  text-decoration: none;
-  padding: 0 1rem;
-  height: 100%;
-  cursor: pointer;
-  &.active {
-    color: #000000;
-  }
+  background: linear-gradient(#6616fc, #f394d3);
 `;
-  
-export const Bars = styled(FaBars)`
-  display: none;
-  color: #808080;
-  @media screen and (max-width: 108px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
+export const LogoContainer = styled.div`
+  width: 100%;
+  height: 65px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(#6616fc, #f394d3);
 `;
-  
+
 export const NavMenu = styled.div`
   display: flex;
-  align-items: center;
-  margin-right: -24px;
-  /* Second Nav */
-  /* margin-right: 24px; */
-  /* Third Nav */
-  /* width: 100vw;
-  white-space: nowrap; */
-  @media screen and (max-width: 108px) {
-    display: none;
+  flex-flow: row nowrap;
+  @media (max-width: 400px) {
+    flex-flow: column nowrap;
+    background: green;
+    position: fixed;
+    transform: ${(props) =>
+      props.open ? "translateX(0%)" : "translateX(100%)"};
+    top: 0;
+    right: 0;
+    height: auto;
+    width: 300px;
+    padding-top: 3.5rem;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
   }
 `;
-  
+
+export const NavLink = styled(Link)`
+  text-decoration: none;
+  padding: 20px 10px;
+  @media (max-width: 400px) {
+    color: white;
+  }
+`;
+
+export const MobileButton = styled.div`
+display:none;
+@media (max-width: 400px) {
+  display: flex;
+  justify-content: space-between;
+  transform-origin: 1px;
+  transition: all 0.3s linear;
+  z-index: 1;
+}
+`;
+export const Bars = styled(FaBars)`
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  cursor: pointer;
+`;
+export const CloseArrow = styled(TiArrowRightThick)`
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.5rem;
+  cursor: pointer;
+`;
+
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
   margin-right: 24px;
-  /* Third Nav */
-  /* justify-content: flex-end;
-  width: 100vw; */
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 `;
-  
+
 export const NavBtnLink = styled(Link)`
   border-radius: 4px;
   background: #808080;
@@ -76,11 +87,17 @@ export const NavBtnLink = styled(Link)`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  /* Second Nav */
   margin-left: 24px;
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #808080;
+  }
+  @media (max-width: 648px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    padding: 30px 0px;
   }
 `;

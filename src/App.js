@@ -9,6 +9,7 @@ import TicTacToe from "./Pages/TicTacToePage";
 import RecipePage from "./Pages/RecipePage";
 import Navbar from "./Components/NavBar";
 import CCP from "./Pages/ccp"
+import WeatherApp from "./Pages/Weather";
 
 // require('dotenv').config({ path: '../.env' });
 
@@ -25,6 +26,9 @@ const App = () => {
         </Route>
         <Route path="/react-recipe-finder/ccp" exact>
           <CCP />
+        </Route>
+        <Route path="/react-recipe-finder/weather" exact>
+          <WeatherApp />
         </Route>
         <Redirect to="/react-recipe-finder/recipe" />
       </Changer>
